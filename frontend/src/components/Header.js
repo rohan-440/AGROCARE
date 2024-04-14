@@ -1,13 +1,14 @@
+import React from 'react';
 import { Link } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
-import i18next from "i18next";
-import LanguageDropdown from "./language";
+// import { useTranslation } from 'react-i18next';
+// import i18next from "i18next";
+// import LanguageDropdown from "./language";
 
 function Header() {
-    const { t } = useTranslation();
-    const handleClick = (e) => {
-        i18next.changeLanguage(e.target.value)
-    }
+    // const { t } = useTranslation();
+    // const handleClick = (e) => {
+    //     i18next.changeLanguage(e.target.value)
+    // }
     return (
         // <Suspense fallback="loading">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{ padding: "20px" }}>
@@ -18,8 +19,8 @@ function Header() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
-                        <Link to="/" className="nav-link">{t("Home")}</Link>
-                        <Link to="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2002012" className="nav-link">Schemes</Link>
+                        <Link to="/" className="nav-link">Home</Link>
+                        <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=2002012" className="nav-link">Schemes</a>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Experts
@@ -44,9 +45,9 @@ function Header() {
                                 <li><Link to="/user-login" className="dropdown-item">Log Out</Link></li>
                             </ul>
                         </li>
-                        <li>
+                        {/* <li>
                             <LanguageDropdown onChange={(e) => handleClick(e)} />
-                        </li>
+                        </li> */}
                     </div>
                 </div>
             </div>
